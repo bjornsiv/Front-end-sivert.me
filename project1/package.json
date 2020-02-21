@@ -4,9 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "live-server --port=3030  --host=localhost --entry-file=index.html ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irnis18/Projectx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjornsiv/Webserver/issues"
+  },
+  "homepage": "https://github.com/bjornsiv/Webserver#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-simplified": "^2.0.0"
+  }
 }
