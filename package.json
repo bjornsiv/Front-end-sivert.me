@@ -1,15 +1,15 @@
 {
   "name": "Webserver",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A react web app ",
+  "main": "/src/script.js",
   "scripts": {
-    "start": "live-server --port=3030  --host=localhost --entry-file=index.html ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sivert",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Irnis18/Projectx.git"
@@ -19,8 +19,17 @@
   },
   "homepage": "https://github.com/bjornsiv/Webserver#readme",
   "dependencies": {
-    "live-server": "^1.2.1",
-    "react-router-dom": "^5.1.2",
-    "react-simplified": "^2.0.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
