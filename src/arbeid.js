@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Arbeid extends React.Component {
+class Arbeid extends Component {
   render() {
     return (
       <div align="center" className="jumbotron jumbotron-fluid">
