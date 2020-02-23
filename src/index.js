@@ -10,7 +10,7 @@ class Arbeid extends Component {
         <p className="lead">Kos deg på reddit i mellomtiden 😅</p>
         <hr className="my-4"></hr>
         <p className="lead">
-          <img src="../assets/reddit_logo.png" width="48px" height="48px" />
+          <img src="https://www.redditinc.com/assets/images/site/reddit-logo.png" height="32px" width="32px"/>
           <a className="btn btn-primary btn-lg" href="https://www.reddit.com" role="button">Reddit</a>
         </p>
       </div>
