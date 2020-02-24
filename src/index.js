@@ -1,13 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Forside from "./Forside";
-import "./index.css"
+import "../Public/index.css";
 
-
-
-
-ReactDOM.render(
-  <Forside />,
-  document.getElementById("root")
-);
+ReactDOM.render(<Forside />, document.getElementById("root"));

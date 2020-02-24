@@ -7,10 +7,14 @@ class Kontakt extends Component {
         <h1 className="display-4">Kontakt meg</h1>
         <p className="lead">Her kan jeg kontaktes</p>
         <hr className="my-4"></hr>
-          <tr className="lead">
-            <th>Epost:     </th>
-            <td>admin@sivert.me</td>
-          </tr>
+        <table>
+          <tbody>
+            <tr className="lead">
+              <th>Epost: </th>
+              <td>admin@sivert.me</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   }
