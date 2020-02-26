@@ -1,22 +1,16 @@
-h1, h2, p, ul, li {
-  font-family: sans-serif;
-}
-ul li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-ul {
-  background-color: #111;
-  padding: 0;
-}
-
-ul li a {
+ul li span {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
   display: block;
 }
-.container { position: relative; display: inline-block; }
+.container { position: right; display: inline-block; }
 .button { padding: 0; width: 50px; border: 0; background-color: #fff; color: #333; cursor: pointer; outline: 0; font-size: 40px; }
+.dropdownKnapp{
+  float: right;
+  padding-right: 20px;
+  padding-top: 0px;
+}
+.titel{
+  padding-left: 10px;
+}

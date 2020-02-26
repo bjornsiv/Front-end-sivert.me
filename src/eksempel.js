@@ -31,4 +31,18 @@
     </ul>
     </div>
   </nav>
-  
+
+  <ul className="header navbar-expand-lg navbar-dark bg-dark navbar-nav mr-auto"><span className="h3 text-white bg-dark">Sivert.me</span>
+    <li className="nav-item btn btn-outline-light text-white bg-dark"><NavLink className="nav-link active" to="/">Hjem</NavLink></li>
+    <li className="nav-item btn btn-outline-light text-white bg-dark"><NavLink className="nav-link" to="/test">Test Tekst</NavLink></li>
+    <li className="nav-item btn btn-outline-light text-white bg-dark"><NavLink className="nav-link" to="/kontakt">Kontakt meg</NavLink></li>
+    <li className="nav-item btn btn-outline-light text-white bg-dark"><NavLink className="nav-link" to="/pepe">Pepe</NavLink></li>
+  </ul>
+
+
+  <div className="content">
+    <Route exact path="/" component={Arbeid}/>
+    <Route path="/test" component={Test}/>
+    <Route path="/kontakt" component={Kontakt}/>
+    <Route path="/pepe" component={Pepe}/>
+  </div>
