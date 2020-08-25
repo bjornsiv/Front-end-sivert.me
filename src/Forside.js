@@ -5,7 +5,7 @@ import Arbeid from "./Arbeid";
 import Test from "./Test";
 import Kontakt from "./Kontakt";
 import Pepe from "./Pepe";
-import Konvertor from "./konv";
+//import Links from "./Links";
 
 class Forside extends Component {
   render() {
@@ -63,15 +63,6 @@ class Forside extends Component {
                   PEPE
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-dark bg-dark"
-                  to={"/konv"}
-                  className="nav-link"
-                >
-                  Konvertor
-                </Link>
-              </li>
             </ul>
           </div>
           <hr />
@@ -80,7 +71,6 @@ class Forside extends Component {
             <Route path="/test" component={Test} />
             <Route path="/kontakt" component={Kontakt} />
             <Route path="/pepe" component={Pepe} />
-            <Route path="/konv" component={Konvertor} />
           </Switch>
         </div>
       </Router>
