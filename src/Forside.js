@@ -5,7 +5,7 @@ import Arbeid from "./Arbeid";
 import Test from "./Test";
 import Kontakt from "./Kontakt";
 import Pepe from "./Pepe";
-//import Links from "./Links";
+import Links from "./Links";
 
 class Forside extends Component {
   render() {
@@ -39,10 +39,10 @@ class Forside extends Component {
               <li>
                 <Link
                   className="text-dark bg-dark"
-                  to={"/test"}
+                  to={"/links"}
                   className="nav-link"
                 >
-                  Tekst test
+                  Linker
                 </Link>
               </li>
               <li>
@@ -63,14 +63,24 @@ class Forside extends Component {
                   PEPE
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="text-dark bg-dark"
+                  to={"/test"}
+                  className="nav-link"
+                >
+                  Tekst Test
+                </Link>
+              </li>
             </ul>
           </div>
           <hr />
           <Switch>
             <Route exact path="/" component={Arbeid} />
-            <Route path="/test" component={Test} />
+            <Route path="/links" component={Links} />
             <Route path="/kontakt" component={Kontakt} />
             <Route path="/pepe" component={Pepe} />
+            <Route path="/test" component={Test} />
           </Switch>
         </div>
       </Router>

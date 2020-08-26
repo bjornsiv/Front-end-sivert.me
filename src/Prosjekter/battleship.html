@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/x-icon" href="229133.png" />
+	<h1>Battleship v2.1</h1>
+	<h3>Klipp på feltene og se om du finner alle de 3 skipene!</h3>
+	<h3 id="forsok"></h3>
+	<style>
+	h1, h3, h4	{
+		color:YellowGreen;
+		text-align: center;
+	}
+	button {
+		color:navy;
+		display: block;
+		width: 100%;
+		border: none;
+		background-color: #4CAF50;
+		padding: 14px 28px;
+		font-size: 16px;
+		cursor: pointer;
+		text-align: center;
+	}
+	ul {
+		color:red;
+		list-style-type:square;
+	}
+	body {
+		background-color: aqua;
+	}
+	#tabell{
+			display:none;
+	}
+
+	</style>
+</head>
+<body>
+	<p id="demo">
+	</p>
+	<table align="center">
+			<thead>
+					<tr>
+						<td>
+							<button id="but1" onClick="go('1', 'but1')">Vann</button>
+						</td>
+						<td>
+							<button id="but2" onclick="go('2', 'but2')">Vann</button>
+						</td>
+						<td>
+							<button id="but3" onclick="go('3', 'but3')">Vann</button>
+						</td>
+						<td>
+							<button id="but4" onclick="go('4', 'but4')">Vann</button>
+						</td>
+				</tr>
+				<tr>
+					<td>
+						<button id="but5" onclick="go('5', 'but5')">Vann</button>
+					</td>
+					<td>
+						<button id="but6" onclick="go('6', 'but6')">Vann</button>
+					</td>
+					<td>
+						<button id="but7" onclick="go('7', 'but7')">Vann</button>
+					</td>
+					<td>
+						<button id="but8" onclick="go('8', 'but8')">Vann</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button id="but9" onclick="go('9', 'but9')">Vann</button>
+					</td>
+					<td>
+						<button id="but10" onclick="go('10', 'but10')">Vann</button>
+					</td>
+					<td>
+						<button id="but11" onclick="go('11', 'but11')">Vann</button>
+					</td>
+					<td>
+						<button id="but12" onclick="go('12', 'but12')">Vann</button>
+					</td>
+				</tr>
+			</thead>
+	</table>
+	<br/>
+	<br/>
+	<h4 id="utdata"></h4>
+	<br/>
+	<br/>
+	<br/>
+	<button onclick="reStart()">Start på nytt</button>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<script>
+	/*Deffinerer variablene og starter første funksjon */
+	var ship = [];
+	var forsok  = 9;
+	var sunket = 0;
+	start();
+
+	/*funksjonen gir en tilfeldig verdi til båtene og sjekker om det er duplikater, duplikat sjekken funker for øyeblikket ikke...*/
+	function start(){
+	for (var i = 0; i < 3; i++) {
+	  let tall;
+	  tall = Number(Math.round(Math.random()*(12 - 1) + 1));
+	    if(ship.includes(tall) === true){
+	      i = i-1;
+	    }
+	    else {
+	      ship[i] = tall;
+	      console.log(ship[i]);
+	    }
+	  }
+	  console.log(ship[0], ship[1], ship[2]);
+	  done();
+	}
+
+
+	/*Resetter knappene og variablene settes tilbake til start verdi*/
+	function reStart(){
+	  ship = [];
+	  forsok  = 9;
+	  sunket = 0;
+	  var u;
+	  for(u=1; u<=12; u++ ){
+	    var knapp = "";
+	    knapp = "but" + u;
+	    document.getElementById(knapp).style.color = "navy";
+	    document.getElementById(knapp).disabled = false;
+	  }
+	  document.getElementById("forsok").innerHTML = "Antall forsøk igjen: " + forsok;
+	  document.getElementById("utdata").innerHTML = "";
+	  start();
+	}
+
+	/*Sjekker om man har vunnet/tapt, oppdaterer forsøk, samt gir beskjed om man har tapt */
+	function done() {
+	  forsok = forsok - 1;
+	  if(sunket===3 ){
+	    alert("Grattulerer, du har vunnet!!    =)");
+	    var u;
+	    for(u=1; u<=12; u++ ){
+	      var knapp = "";
+	      knapp = "but" + u;
+	      document.getElementById(knapp).disabled = true;
+	      document.getElementById("utdata").innerHTML = "";
+	    }
+	  }
+	  else if(forsok>0){
+	   document.getElementById("forsok").innerHTML = "Antall forsøk igjen: " + forsok;
+	  }
+	   else if(forsok===0){
+	     forsok = 0
+	     document.getElementById("forsok").innerHTML = "Antall forsøk igjen: " + forsok;
+	     for(u=1; u<=12; u++ ){
+	       var knapp = "";
+	       knapp = "but" + u;
+	       document.getElementById(knapp).disabled = true;
+	     }
+	     document.getElementById("utdata").innerHTML = "";
+	     alert("Beklager, du har tapt");
+	   }
+	}
+
+	/*En funksjon som kjører når noen trykker på en knapp  */
+	function go(value, value2, object){
+	      if (ship[0] == value || ship[1] == value || ship[2] == value){
+	        document.getElementById("utdata").innerHTML = "Yes, Du traff!!!!";
+	        document.getElementById(value2).style.color = "red";
+	        document.getElementById(value2).disabled = true;
+	          sunket++
+	          done();
+	      }
+	      else{
+	        document.getElementById("utdata").innerHTML = "Bom, prøv igjen...";
+	        document.getElementById(value2).style.color = "yellow";
+	        document.getElementById(value2).disabled = true;
+	        done();
+	      }
+	    }
+
+	</script>
+</body>
+</html>

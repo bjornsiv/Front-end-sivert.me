@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <canvas id="canTxt" width="600" height="400"></canvas>
+    <script>
+    let txtCan = document.getElementById("canTxt");
+    let ctx = txtCan.getContext("2d");
+    let bobler = [];
+    txtCan.addEventListener("mousedown", museklikk, false);
+
+    class Boble {
+      constructor(_x, _y, _r) {
+        this.x = _x;
+        this.y = _y;
+        this.r = _r;
+        this.farge = tilfeldigFarge();
+      }
+      flytt() {
+        this.x = this.x + Math.round(Math.random() * 10 - 5);
+        this.y = this.y + Math.round(Math.random() * 10 - 5);
+      }
+      vis() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+        ctx.fillStyle = this.farge;
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+      }
+      klikk(x, y) {
+        let a = this.x - x;
+        let b = this.y - y;
+        let d = Math.sqrt(a * a + b * b);
+        if (d < this.r) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      innenfor() {
+        if (this.x >= 600 || this.y >= 400 || this.x <= 0 || this.y <= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      let x = Math.round(Math.random() * txtCan.width + 1);
+      let y = Math.round(Math.random() * txtCan.height + 1);
+      let r = Math.round(Math.random() * 40 + 10);
+      bobler[i] = new Boble(x, y, r);
+    }
+    function tilfeldigFarge() {
+      let letters = "0123456789ABCDEF";
+      let farge = "#";
+      for (var i = 0; i < 6; i++) {
+        farge += letters[Math.round(Math.random() * 16)];
+      }
+      return farge;
+    }
+
+    function reset() {
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, txtCan.width, txtCan.height);
+    }
+    function museklikk(event) {
+      let r = Math.round(Math.random() * 40 + 10);
+      let b = new Boble(event.x, event.y, r);
+      bobler.push(b);
+    }
+    function tegn() {
+      reset();
+
+      for (let i = 0; i < bobler.length; i++) {
+        bobler[i].flytt();
+        bobler[i].vis();
+        if (bobler[i].innenfor() == true) {
+          bobler[i].x = 300;
+          bobler[i].y = 200;
+        }
+      }
+    }
+    function nyBoble() {
+      let x = Math.round(Math.random() * txtCan.width + 1);
+      let y = Math.round(Math.random() * txtCan.height + 1);
+      let r = Math.round(Math.random() * 40 + 10);
+      let b = new Boble(x, y, r);
+      bobler.push(b);
+      console.log("Jippi, det funka!");
+      console.log(bobler);
+    }
+    setInterval(tegn, 100);
+    setInterval(nyBoble, 1000);
+    </script>
+  </body>
+</html>
