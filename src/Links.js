@@ -11,10 +11,10 @@ class Links extends Component {
           <tbody>
             <tr className="lead">
               <th align="center">
-                <td><a href="/src/Prosjekter/Bobler.html">Enkle bobler</a></td><br/>
-                <td><a href="/src/Prosjekter/greenBottles.html">Green bottles</a></td><br/>
-                <td><a href="/src/Prosjekter/Deling.html">Litt deling</a></td><br/>
-                <td><a href="/src/Prosjekter/battleship.html">Battleships</a></td><br/>
+                <td><a href="/1Prosjekter/Bobler.html">Enkle bobler</a></td><br/>
+                <td><a href="/1Prosjekter/greenBottles.html">Green bottles</a></td><br/>
+                <td><a href="/1Prosjekter/Deling.html">Litt deling</a></td><br/>
+                <td><a href="/1Prosjekter/battleship.html">Battleships</a></td><br/>
               </th>
             </tr>
           </tbody>
