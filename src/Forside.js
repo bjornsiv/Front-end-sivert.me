@@ -13,6 +13,7 @@ class Forside extends Component {
       <Router>
         <div className="bg-dark">
           <span className="h3 text-white bg-dark titel" width="300">
+            <img src="/Assets/229133.png" width="64px" height="64px"/>
             Sivert.me
           </span>
           <div className="dropdown">
