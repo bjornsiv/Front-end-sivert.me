@@ -12,9 +12,9 @@ class Forside extends Component {
     return (
       <Router>
         <div className="bg-dark">
-          <span className="h3 text-white bg-dark titel" width="300">
-            <img src="/Assets/229133.png" width="64px" height="64px"/>
-            Sivert.me
+          <span className="h3 text-white bg-dark titel nav-link" width="300" href="{/}">
+            <img src="/Assets/229133.png" width="64px" height="64px" />
+              Sivert.me
           </span>
           <div className="dropdown">
             <button
