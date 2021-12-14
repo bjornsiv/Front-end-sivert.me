@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Arbeid extends Component {
   render() {
     return (
-      <div align="center" className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid">
         <h1 className="display-4">Denne siden er under arbeid dessverre</h1>
         <p className="lead">Kos deg på reddit i mellomtiden 😅</p>
         <hr className="my-4"></hr>
