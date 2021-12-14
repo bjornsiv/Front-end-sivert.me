@@ -3,9 +3,9 @@ import React, { Component } from "react";
 class Links extends Component {
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid text-center">
+      <div className="jumbotron jumbotron-fluid text-center ">
         <h1 className="display-4">Lenker</h1>
-        <p className="lead">Lenker til små mini prosjekter eller gøye ting ;)</p>
+        <p className="text-center">Lenker til små mini prosjekter eller gøye ting ;)</p>
         <hr className="my-4"></hr>
         <table>
           <tbody>

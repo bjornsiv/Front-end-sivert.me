@@ -216,7 +216,7 @@ class FormLabel extends Component {
 
 // Form input - legge til spill
 class FormInput extends Component<{
-  value: string | number;
+  value: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   [prop: string]: any;
 }> {
@@ -335,7 +335,7 @@ class FormDate extends Component<{
 }
 
 class FormSelectDropdown extends Component<{
-  valueList: { name: string, value: string }[];
+  valueList:string[];
   value: string;
 
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
@@ -346,10 +346,10 @@ class FormSelectDropdown extends Component<{
     return (
       <div>
         <select className="form-select" value={value} onChange={onChange} {...rest}>
-          {valueList.map((option) => {
+          {valueList.map((option, index) => {
             return (
-              <option key={option.value} className="dropdown-item" value={option.value}>
-                {option.name}
+              <option key={index} className="dropdown-item" value={option}>
+                {option}
               </option>
             );
           })}

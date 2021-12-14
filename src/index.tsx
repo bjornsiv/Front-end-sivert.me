@@ -8,6 +8,8 @@ import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
 import Prosjekter from './prosjekter';
 import Links from './Links';
+import Kontakt from './kontakt';
+import Kalkulator from './karakterkalkulator'
 
 const history = createHashHistory();
 
@@ -26,8 +28,8 @@ class Menu extends Component {
             <NavBar.Link to="/">Home</NavBar.Link>
             <NavBar.Link to="/linker">Linker</NavBar.Link>
             <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
+            <NavBar.Link to="/kontakt">Kontakt</NavBar.Link>
             <Button.Toogle onClick={() => {}}></Button.Toogle>
-
           </Column>
         </CardRow>
       </>
@@ -46,6 +48,8 @@ if (root)
         <Route exact path="/" component={Arbeid} />
         <Route exact path="/prosjekter" component={Prosjekter} />
         <Route exact path="/linker" component={Links} />
+        <Route exact path="/kontakt" component={Kontakt} />
+        <Route exact path="/karakter" component={Kalkulator}/>
       </div>
     </HashRouter>,
     document.getElementById('root')
