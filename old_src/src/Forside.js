@@ -5,7 +5,7 @@ import Arbeid from "../../src/arbeid";
 import Test from "./Test";
 import Kontakt from "./Kontakt";
 import Pepe from "./Pepe";
-import Links from "./Links";
+import Links from "../../src/Links";
 
 class Forside extends Component {
   render() {

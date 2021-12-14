@@ -26,6 +26,21 @@ export class Row extends Component {
   }
 }
 
+export class Logo extends Component<{ title?: string }> {
+  render(){
+    return (
+      <>
+        <div className="container">
+          <NavBar.Link to="/">
+            <img src="/Assets/229133.png" width="64px" height="64px"></img>
+            <h1>{this.props.title}</h1>
+          </NavBar.Link>
+        </div>
+      </>
+    )
+  }
+}
+
 export class CardRow extends Component {
   render() {
     return (
@@ -135,6 +150,19 @@ class ButtonSecondary extends Component<{ onClick: () => void }> {
     );
   }
 }
+class ButtonDarkModeToggle extends Component <{ onClick: () => void }>{
+  render(){
+    return(
+      <div className="container">
+	        <button 
+            className="toggle--checkbox" 
+            aria-label="Toggle Light Mode" 
+            onClick={this.props.onClick}>
+	        </button> 
+    </div>
+    )
+  }
+}
 
 export class Button {
   static Dark = ButtonDark;
@@ -143,6 +171,7 @@ export class Button {
   static Light = ButtonLight;
   static Info = ButtonInfo;
   static Secondary = ButtonSecondary;
+  static Toogle = ButtonDarkModeToggle;
 }
 
 // Navigation bar link (properties: to)
