@@ -1,37 +1,61 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index_bundle.js"
+  entry: './src/index.js', 
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    hashFunction: "xxhash64",
+  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
+        test: /\.tsx$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.ts$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.jsx$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader'],
+      },
+      {
         test: /\.js$/,
-        exclude: /nodes_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader'],
       },
       {
-        test: /\.css$/,
-        loader: "style-loader!css-loader"
+        test: /\.(png|jpg|webp)$/,
+        loader: 'url-loader'
       },
       {
-        test: /\.(jpg|png|svg)$/,
-        loader: "url-loader",
-        options: {
-          limit: Infinity
-        }
-      }
-    ]
+        test: /\.(png|jpg|webp)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              icon: true,
+            },
+          }
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],      
+      },
+    ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./Public/index.html"
-    })
-  ]
 };
