@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ReactDOM from "react-dom";
-import Arbeid from "./Arbeid";
+import Arbeid from "./arbeid";
 import Test from "./Test";
 import Kontakt from "./Kontakt";
 import Pepe from "./Pepe";
