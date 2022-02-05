@@ -17,11 +17,11 @@ class CV extends Component {
                     <hr/>
                 </div>
             <Card title="Om Meg">
-                Jeg er 23 år gammel og er for øyeblikket påbegynt 3. året Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommerfra miljøet og de man arbeider med.
+                Jeg er 23 år gammel og er for øyeblikket påbegynt 3. året Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommer fra miljøet og de man arbeider med.
             </Card>
             <hr></hr>
             <Card title="Interesser">
-                <b>Sport</b><br/> Jeg har prøvd meg på mange forskjelligeballsporter, som basketball, fotball, innebandy,squash<br/><br/>
+                <b>Sport</b><br/> Jeg har prøvd meg på mange forskjellige ballsporter, som basketball, fotball, innebandy, og squash<br/><br/>
                 <b>Data og teknologi</b><br/> Fra ung alder av har jeg alltid hatt en interesse fordata og teknologi generelt, spesielt ny teknologisom åpner for nye muligheter
             </Card>
             <hr></hr>
