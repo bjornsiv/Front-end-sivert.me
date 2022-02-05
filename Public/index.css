@@ -141,3 +141,12 @@ img {
   justify-content: end;
   padding-left: 30%;
 }
+
+.p-style {
+  font-weight: normal;
+  font-size: medium;
+}
+
+.a-style {
+  margin-left: 20px;
+}

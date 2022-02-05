@@ -27,7 +27,6 @@ class Menu extends Component {
         <Column></Column>
         <Column>
           <NavBar brand="">
-            <NavBar.Link to="/">Hjem</NavBar.Link>
             <NavBar.Link to="/CV">CV</NavBar.Link>
             <NavBar.Link to="/linker">Linker</NavBar.Link>
             <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
@@ -47,7 +46,7 @@ if (root)
     <HashRouter>
       <div>
         <Menu />
-        <Route exact path="/" component={Arbeid} />
+        <Route exact path="/" component={CV} />
         <Route exact path="/prosjekter" component={Prosjekter} />
         <Route exact path="/linker" component={Links} />
         <Route exact path="/kontakt" component={Kontakt} />
