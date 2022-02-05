@@ -26,15 +26,14 @@ export class Row extends Component {
   }
 }
 
+
+/*<h2>{this.props.title}</h2>*/
 export class Logo extends Component<{ title?: string }> {
   render(){
     return (
       <>
         <div className="container">
-          <NavBar.Link to="/">
-            <img src="/Assets/229133.png" width="16px" height="16px"></img>
-            <h2>{this.props.title}</h2>
-          </NavBar.Link>
+            <img src="/Assets/sivert.jpg" className="img-round" alt="Sivert Bjørnstad"></img>
         </div>
       </>
     )
@@ -191,8 +190,8 @@ export class NavBar extends Component<{ brand: ReactNode }> {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark navbar-style NavBar-header">
-        <div className="container-fluid justify-content-start">
+      <nav className="navbar navbar-expand-sm navbar-dark navbar-style NavBar-header" >
+        <div className="container-fluid justify-content-start" >
           <NavLink className="navbar-brand" activeClassName="active" exact to="/">
             {this.props.brand}
           </NavLink>
@@ -370,6 +369,7 @@ export class Form {
   static SelectDropDown = FormSelectDropdown;
 }
 
+/*
 // Alert messages - beskjeder på nettsiden
 export class Alert extends Component {
   alerts: { id: number; text: ReactNode; type: string }[] = [];
@@ -431,7 +431,7 @@ export class Alert extends Component {
     });
   }
 }
-
+*/
 
 
 // Søkefelt. Hentet fra (Forms) https://getbootstrap.com/docs/4.0/components/navbar/#forms
