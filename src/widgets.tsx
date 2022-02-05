@@ -32,8 +32,8 @@ export class Logo extends Component<{ title?: string }> {
       <>
         <div className="container">
           <NavBar.Link to="/">
-            <img src="/Assets/229133.png" width="64px" height="64px"></img>
-            <h1>{this.props.title}</h1>
+            <img src="/Assets/229133.png" width="16px" height="16px"></img>
+            <h2>{this.props.title}</h2>
           </NavBar.Link>
         </div>
       </>

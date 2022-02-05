@@ -7,10 +7,17 @@ class Kontakt extends Component {
         <h1 className="display-4">Kontakt meg</h1>
         <p className="lead">Her kan jeg kontaktes</p>
         <hr className="my-4"></hr>
-        <table>
+        <table style={{
+          position: 'relative', left: '50%', top: '90%',
+          transform: 'translate(-50%, -10%)'
+        }}>
           <tbody>
-            <tr className="lead">
-              <th>Epost: </th>
+            <tr className="lead text-center">
+              <th>Epost:   </th>
+              <td>sivertbjorn@gmail.com</td>
+            </tr>
+            <tr className="lead text-center">
+              <th>Epost:   </th>
               <td>admin@sivert.me</td>
             </tr>
           </tbody>
@@ -20,3 +27,26 @@ class Kontakt extends Component {
   }
 }
 export default Kontakt;
+
+
+/*
+<table style={{
+          position: 'relative', left: '50%', top: '90%',
+          transform: 'translate(-50%, -10%)'
+        }}>
+          <tbody>
+            <tr className="lead text-center">
+                <td><a href="/1Prosjekter/Bobler.html">Enkle bobler</a></td>
+              </tr>
+              <tr className="lead text-center">
+                <td><a href="/1Prosjekter/greenBottles.html">Green bottles</a></td>
+                </tr>
+              <tr className="lead text-center">
+                <td><a href="/1Prosjekter/Deling.html">Litt deling</a></td>
+                </tr>
+              <tr className="lead text-center">
+                <td><a href="/1Prosjekter/battleship.html">Battleships</a></td>
+            </tr>
+          </tbody>
+        </table>
+*/

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import { NavBar, Card, Alert, Column, Logo, CardRow, Button } from './widgets';
+import { NavBar, Card, Alert, Column, Logo, Button } from './widgets';
 import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
 import Prosjekter from './prosjekter';
@@ -19,19 +19,17 @@ class Menu extends Component {
   render() {
     return (
       <>
-        <CardRow>
-          <Column>
-          <Logo title="Sivert.me"></Logo>
-          </Column> 
+        <div color='grey'>
           
-          <Column right={true}>
-            <NavBar.Link to="/">Home</NavBar.Link>
+          <Logo title="Sivert.me"></Logo>
+          
+            <NavBar.Link to="/">Hjem</NavBar.Link>
+            <NavBar.Link to="/CV">CV</NavBar.Link>
             <NavBar.Link to="/linker">Linker</NavBar.Link>
             <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
             <NavBar.Link to="/kontakt">Kontakt</NavBar.Link>
-            <Button.Toogle onClick={() => {}}></Button.Toogle>
-          </Column>
-        </CardRow>
+
+        </div>
       </>
     );
   }
