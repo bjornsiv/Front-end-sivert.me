@@ -1,3 +1,8 @@
+#Ignore build
+public/bundle.js
+public/bundle.js.LICENSE.txt
+public/bundle.js.map
+
 #Ignore old souce
 old_src/
 
