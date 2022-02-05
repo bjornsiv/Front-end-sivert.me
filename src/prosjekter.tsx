@@ -14,7 +14,7 @@ class Prosjekter extends Component {
         <hr className="my-4"></hr>
         <CardRow><h1><a href="https://www.sivert.me/nettside/">Retro Nettside prosjekt/spill</a></h1></CardRow>
         <CardRow><h1><a href="https://www.sivert.me/1Prosjekter/mujaffa.html">Mujaffa spillet</a></h1></CardRow>
-        <CardRow><h1><NavLink to={'/karakter'}>Karakterkalkulator</NavLink></h1></CardRow>
+        <CardRow><h1><NavLink to={'/karakter'}>Karakterkalkulator - WIP</NavLink></h1></CardRow>
       </div>
     );
   }

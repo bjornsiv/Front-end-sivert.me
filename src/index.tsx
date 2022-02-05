@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import { NavBar, Card, Alert, Column, Logo, Button } from './widgets';
+import { NavBar, Card, Column, Logo, Button, Row } from './widgets';
 import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
 import Prosjekter from './prosjekter';
 import Links from './Links';
 import Kontakt from './kontakt';
 import Kalkulator from './karakterkalkulator'
+import CV from './CV';
 
 const history = createHashHistory();
 
@@ -18,18 +19,22 @@ class Menu extends Component {
 
   render() {
     return (
-      <>
-        <div color='grey'>
-          
-          <Logo title="Sivert.me"></Logo>
-          
+        <>
+        <Row>
+        <Column>
+          <h1>Sivert Bjørnstad</h1>
+        </Column>
+        <Column></Column>
+        <Column>
+          <NavBar brand="">
             <NavBar.Link to="/">Hjem</NavBar.Link>
             <NavBar.Link to="/CV">CV</NavBar.Link>
             <NavBar.Link to="/linker">Linker</NavBar.Link>
             <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
             <NavBar.Link to="/kontakt">Kontakt</NavBar.Link>
-
-        </div>
+          </NavBar>
+        </Column>
+      </Row><hr></hr>
       </>
     );
   }
@@ -41,12 +46,12 @@ if (root)
   ReactDOM.render(
     <HashRouter>
       <div>
-        <Alert />
         <Menu />
         <Route exact path="/" component={Arbeid} />
         <Route exact path="/prosjekter" component={Prosjekter} />
         <Route exact path="/linker" component={Links} />
         <Route exact path="/kontakt" component={Kontakt} />
+        <Route exact path="/CV" component={CV} />
         <Route exact path="/karakter" component={Kalkulator}/>
       </div>
     </HashRouter>,
