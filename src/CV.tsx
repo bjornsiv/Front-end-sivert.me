@@ -10,7 +10,7 @@ class CV extends Component {
           <Column>
                 <Logo title=""></Logo>
                 <div className="icon-div">
-                    <h3><i>Student, Bachleor i <br/> Digital Forretningsutvikling</i></h3>
+                    <h3><i>Student, Bachelor i <br/> Digital Forretningsutvikling</i></h3>
                     <a className="icon-link" href="https://github.com/bjornsiv"><img src="../Assets/icons/github.png" className="img-icon" alt="github" ></img></a>
                     <a href="https://www.linkedin.com/in/sivert-bj%C3%B8rnstad/"><img src="../Assets/icons/Linkedin.png" className="img-icon" alt="linkedin"></img></a>
                     <a href="../Assets/Sivert bjørnstad.pdf"><img src="../Assets/icons/pdf.png" className="img-icon" alt="pdf" ></img></a>
