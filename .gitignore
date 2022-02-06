@@ -7,6 +7,11 @@ public/temp.zip
 #Ignore old souce
 old_src/
 
+#Ignore npm build
+/public/bundle.js
+/public/bundle.js.LICENCE.txt
+/public/bundle.js.map
+
 # Logs
 logs
 *.log
