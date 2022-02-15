@@ -129,23 +129,14 @@ img {
 }
 
 .img-icon {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 .icon-div {
   display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-
-  padding:10px;
-  padding-left: 20px;
-}
-
-.icon-link {
-  display: flex;
-  justify-content: end;
-  padding-left: 15%;
+  justify-content: flex-end safe;
+  flex-wrap: nowrap;
 }
 
 .p-style {
