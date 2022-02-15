@@ -1,7 +1,7 @@
 {
-  "name": "Webserver",
+  "name": "Front End - sivert.me",
   "version": "1.0.0",
-  "description": "A react web app ",
+  "description": "My web application",
   "main": "/src/index.tsx",
   "scripts": {
     "start": "webpack-dev-server --mode development  --open --hot",
