@@ -6,7 +6,12 @@ ul li span {
   text-decoration: none;
   display: block;
 }
-.container { position: right; display: inline; }
+.container { 
+  position: right; 
+  display: flex; 
+  flex-wrap: wrap;
+  flex-shrink: 3;
+}
 .button { padding: 0; width: 50px; border: 0; background-color: #fff; color: #333; cursor: pointer; outline: 0; font-size: 40px; }
 .dropdownKnapp{
   float: right;
@@ -131,6 +136,7 @@ img {
 .icon-div {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
 
   padding:10px;
   padding-left: 20px;
@@ -139,7 +145,7 @@ img {
 .icon-link {
   display: flex;
   justify-content: end;
-  padding-left: 30%;
+  padding-left: 15%;
 }
 
 .p-style {

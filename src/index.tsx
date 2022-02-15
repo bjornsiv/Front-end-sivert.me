@@ -52,6 +52,7 @@ if (root)
         <Route exact path="/kontakt" component={Kontakt} />
         <Route exact path="/CV" component={CV} />
         <Route exact path="/karakter" component={Kalkulator}/>
+        <Route exact path="/arbeid" component={Arbeid}/>
       </div>
     </HashRouter>,
     document.getElementById('root')

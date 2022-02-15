@@ -81,13 +81,3 @@ body {
     display: flex;
     justify-content: flex-end;
   }
-
-  .NavBar-header {
-    background-image: url('Games-Banner.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20%;
-    display: flex;
-}
