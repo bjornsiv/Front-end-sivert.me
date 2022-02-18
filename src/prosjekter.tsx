@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { CardRow, Card } from "./widgets";
 import { createHashHistory } from 'history';
-import { NavLink } from "react-router-dom";
-
 const history = createHashHistory();
 
 class Prosjekter extends Component {
+
+
+
   render() {
     return (
       <div className="jumbotron jumbotron-fluid text-center ">
@@ -34,5 +35,7 @@ class Prosjekter extends Component {
       </div>
     );
   }
+  
 }
+
 export default Prosjekter;

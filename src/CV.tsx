@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import { Card, Column, Logo, Row } from './widgets';
 
 class CV extends Component {
+    alder() {
+        let bursdag = new Date(1998,1,19);
+        let idag = new Date();
+        let aar = idag.getFullYear() - bursdag.getFullYear();
+        let maaned = idag.getMonth() - bursdag.getMonth();
+        
+        if (maaned < 0 || maaned == 0 && idag.getDate() < bursdag.getDate()) {
+            aar--;
+        }
+        return aar;
+    }
+
   render() {
     return (
       <>
@@ -19,7 +31,7 @@ class CV extends Component {
                     <hr/>
                 </div>
             <Card title="Om Meg">
-                Jeg er 23 år gammel og er for øyeblikket påbegynt 3. året Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommer fra miljøet og de man arbeider med.
+                Jeg er {this.alder()} år gammel og er for øyeblikket påbegynt 3. året Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommer fra miljøet og de man arbeider med.
             </Card>
             <hr></hr>
             <Card title="Interesser">
