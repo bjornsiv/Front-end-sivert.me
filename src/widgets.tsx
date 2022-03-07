@@ -515,15 +515,59 @@ export class SignIn extends Component {
   }
 }
 
-export class OppgaveView extends Component {
+export class OppgaveView extends Component<{ src?: string , desc?: string, title?: string, fagkode?: string, img?: string }> {
   render() {
     return(
       <>
+        <div className="pdf-style">
+          <h3 className="text-justify">{this.props.title} - {this.props.fagkode}</h3>
+          <div className="text-justify">{this.props.desc}</div>
+          <div className="img-container">
+            <img src={this.props.img} className="pdf-img"/>
+              <div className="overlay">
+                <a className="link-img" href={this.props.src}>Åpne pdf</a>
+              </div>
+          </div>
+      </div>
+
       
+      <br/>
+        <br/>
+        <br/>
       </>
     )
   }
 }
+
+/*
+export class OppgaveView extends Component<{ src?: string , desc?: string, title?: string, fagkode?: string }> {
+  render() {
+    return(
+      <>
+        <div>
+          <h3>{this.props.title} - {this.props.fagkode}</h3>
+          <div>{this.props.desc}</div>
+          <div className="pdf-style">
+            <iframe 
+              src={this.props.src}
+              scrolling="no"
+              width="100%"
+              height="480"
+              className="embed-responsive-item"
+            />
+          </div>
+        </div>
+        <a href={this.props.src}>Åpne som pdf</a>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </>
+    )
+  }
+}
+*/
+
 /*
 // Image - bilder av spill o.l. Vi ble aldri ferdige med denne, men lar den likevel stå 
 // for å vise at vi har tenkt på denne funksjonaliteten.

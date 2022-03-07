@@ -6,6 +6,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import { NavBar, Card, Column, Logo, Button, Row } from './widgets';
 import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
+import DokumentArkiv from './dokumenter';
 import Prosjekter from './prosjekter';
 import Links from './Links';
 import Kontakt from './kontakt';
@@ -28,7 +29,7 @@ class Menu extends Component {
         <Column>
           <NavBar brand="">
             <NavBar.Link to="/CV">CV</NavBar.Link>
-            <NavBar.Link to="/linker">Linker</NavBar.Link>
+            <NavBar.Link to="/dokument">Oppgaver</NavBar.Link>
             <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
             <NavBar.Link to="/kontakt">Kontakt</NavBar.Link>
           </NavBar>
@@ -53,6 +54,7 @@ if (root)
         <Route exact path="/CV" component={CV} />
         <Route exact path="/karakter" component={Kalkulator}/>
         <Route exact path="/arbeid" component={Arbeid}/>
+        <Route exact path="/dokument" component={DokumentArkiv}/>
       </div>
     </HashRouter>,
     document.getElementById('root')
