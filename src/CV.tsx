@@ -3,7 +3,7 @@ import { Card, Column, Logo, Row } from './widgets';
 
 class CV extends Component {
     alder() {
-        let bursdag = new Date(1998,1,19);
+        let bursdag = new Date(1998,1,19); //Måneder går fra 0-11, brukte altfor lang tid på å finne ut av det...
         let idag = new Date();
         let aar = idag.getFullYear() - bursdag.getFullYear();
         let maaned = idag.getMonth() - bursdag.getMonth();
@@ -67,7 +67,16 @@ class CV extends Component {
                     praktisk erfaring med å gjennomføre og lede prosjekter. Jeg har og
                     stiftet kjennskap til Agile og Scrum.<br/><br/>
                 <b>Front-end programmering</b><br/>
-                    Gjennom studiet har jeg hatt flere fag med front-end programmeringog har vært borti flere rammeverk og teknologier for utvikling.
+                    Gjennom studiet har jeg hatt flere fag med front-end programmeringog har vært borti flere rammeverk og teknologier for utvikling.<br/>
+                    Jeg har tidligere erfaring med: 
+                    <ul>
+                        <li>React</li>
+                        <li>SQL-databaser</li>
+                        <li>Ubuntu server</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                    </ul>
             </Card>
           </Column>
           </Row>
