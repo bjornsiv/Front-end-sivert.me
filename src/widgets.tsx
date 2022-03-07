@@ -515,6 +515,15 @@ export class SignIn extends Component {
   }
 }
 
+export class OppgaveView extends Component {
+  render() {
+    return(
+      <>
+      
+      </>
+    )
+  }
+}
 /*
 // Image - bilder av spill o.l. Vi ble aldri ferdige med denne, men lar den likevel stå 
 // for å vise at vi har tenkt på denne funksjonaliteten.
