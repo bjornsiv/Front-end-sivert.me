@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import { NavBar, Card, Column, Logo, Button, Row } from './widgets';
+import { NavBar, Column, Row } from './widgets';
 import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
 import DokumentArkiv from './dokumenter';

@@ -151,7 +151,7 @@ img {
 .pdf-style {
   border: none;
   width: 640px;
-  
+  padding-right: 4%;
 }
 
 .img-container {
