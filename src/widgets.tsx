@@ -5,13 +5,13 @@ import { NavLink } from 'react-router-dom';
 
 // Card - for å ramme inn innhold på nettsiden, kan sette tittel
 // Properties: title
-export class Card extends Component<{ title: ReactNode }> {
+export class Card extends Component<{ title: ReactNode, center?: boolean }> {
   render() {
     return (
-      <div className="card rounded">
+      <div className="card rounded align">
         <div className="card-body">
-          <p className="card-title">{this.props.title}</p>
-          <div className="card-text">{this.props.children}</div>
+          <p className={"card-title text-" + (this.props.center ? 'center' : 'none')}>{this.props.title}</p>
+          <div className={"card-text text-" + (this.props.center ? 'center' : 'none')}>{this.props.children}</div>
         </div>
       </div>
     );
@@ -72,7 +72,7 @@ export class AutoColumn extends Component<{ right?: boolean }> {
   }
 }
 // Column (properties: width, right)
-export class Column extends Component<{ width?: number; right?: boolean }> {
+export class Column extends Component<{ width?: number; right?: boolean; to?: string }> {
   render() {
     return (
       <div className={'col' + (this.props.width ? '-' + this.props.width : '')}>

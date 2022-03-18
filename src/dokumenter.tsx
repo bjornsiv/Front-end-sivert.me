@@ -8,7 +8,7 @@ class DokumentArkiv extends Component {
         <div className="header-align">
             <h1 >Oppgavesamling fra NTNU</h1>
             <div>Et utvalg av større semesteroppgaver jeg har deltatt på iløpet av studietiden min på NTNU</div>
-            <hr></hr>
+            <hr className="my-4"></hr>
         </div>
         <div className="container">
         <Row>

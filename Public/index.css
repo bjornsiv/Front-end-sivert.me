@@ -161,9 +161,10 @@ img {
 
 .pdf-img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 307px;
+  height: 240px;
   float: center;
+  object-fit: contain;
 }
 
 .overlay {
@@ -195,4 +196,9 @@ img {
 
 .header-align {
   text-align: center;
+}
+
+.div-width {
+  width: 1320px;
+  align-items: center ;
 }

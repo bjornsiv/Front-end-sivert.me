@@ -4,7 +4,7 @@ import { Card, Column, Logo, Row } from './widgets';
 class CV extends Component {
     alder() {
         let bursdag = new Date(1998,1,19); //Måneder går fra 0-11, brukte altfor lang tid på å finne ut av det...
-        let idag = new Date();
+        let idag = new Date(); 
         let aar = idag.getFullYear() - bursdag.getFullYear();
         let maaned = idag.getMonth() - bursdag.getMonth();
         
@@ -17,7 +17,7 @@ class CV extends Component {
   render() {
     return (
       <>
-      <div className="container">
+      <div className="container div-width">
           <Row>
           <Column>
                 <Logo title=""></Logo>

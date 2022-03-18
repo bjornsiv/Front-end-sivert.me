@@ -3,10 +3,13 @@ import React, { Component } from "react";
 class Kontakt extends Component {
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid text-center">
-        <h1 className="display-4">Kontakt meg</h1>
-        <p className="lead">Her kan jeg kontaktes</p>
+      <>
+      <div className="header-align">
+        <h1 >Kontakt meg</h1>
+        <div>Her kan jeg kontaktes</div>
         <hr className="my-4"></hr>
+      </div>
+      <div className="container">
         <table style={{
           position: 'relative', left: '50%', top: '90%',
           transform: 'translate(-50%, -10%)'
@@ -23,6 +26,7 @@ class Kontakt extends Component {
           </tbody>
         </table>
       </div>
+      </>
     );
   }
 }
