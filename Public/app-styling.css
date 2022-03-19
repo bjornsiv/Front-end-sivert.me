@@ -6,25 +6,8 @@
   display: inline-block;
 }
 */
-.nav-link{
-  color:white;
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  font-family: Tahoma, sans-serif;
-  border: 0ch;
-  display: inline;
-}
-.nav-size {
-  width: 60px;
-  display: block;
-}
-.nav-button{
-  display: inline;
-  flex: flex-end;
-}
-.nav-bar-width{
-  width: 281px
-}
+
+
 /* Header Styles */
 .header-link{
   color:white;

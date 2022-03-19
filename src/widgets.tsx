@@ -69,10 +69,10 @@ static Link = NavBarLink;
         </button>
         <div className="collapse navbar-collapse" id="navbarNav" >
           <ul className="navbar-nav">
-            <li className="nav-item d-none d-lg-inline  ">
+            <li className="nav-item d-none d-md-inline  ">
               {this.props.children}
             </li>
-            <li className="nav-item d-xs-block d-lg-none">
+            <li className="nav-item d-xs-block d-md-none">
               {this.props.children}
             </li>
           </ul>

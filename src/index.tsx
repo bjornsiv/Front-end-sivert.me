@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import { NavBar, Column, Row, HeaderLink } from './widgets';
+import { NavBar, Column, HeaderLink } from './widgets';
 import { createHashHistory } from 'history';
+import '../public/app.scss'
 import Arbeid from './arbeid'
 import DokumentArkiv from './dokumenter';
 import Prosjekter from './prosjekter';
@@ -21,7 +22,7 @@ class Menu extends Component {
   render() {
     return (
         <>
-        <Row className="row-margin">
+        <div className="container">
         <Column>
          <HeaderLink title="Sivert Bjørnstad" to="/CV"></HeaderLink>
         </Column>
@@ -34,7 +35,7 @@ class Menu extends Component {
             <NavBar.Link to="/kontakt" >Kontakt</NavBar.Link>
           </NavBar>
         </Column>
-      </Row><hr></hr>
+      </div><hr></hr>
       </>
     );
   }
