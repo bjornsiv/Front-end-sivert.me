@@ -21,17 +21,17 @@ class Menu extends Component {
   render() {
     return (
         <>
-        <Row>
+        <Row className="row-margin">
         <Column>
          <HeaderLink title="Sivert Bjørnstad" to="/CV"></HeaderLink>
         </Column>
         <Column></Column>
         <Column>
           <NavBar brand="">
-            <NavBar.Link to="/CV">CV</NavBar.Link>
-            <NavBar.Link to="/dokument">Oppgaver</NavBar.Link>
-            <NavBar.Link to="/prosjekter">Prosjekter</NavBar.Link>
-            <NavBar.Link to="/kontakt">Kontakt</NavBar.Link>
+            <NavBar.Link to="/CV" >CV</NavBar.Link>
+            <NavBar.Link to="/dokument" >Oppgaver</NavBar.Link>
+            <NavBar.Link to="/prosjekter" >Prosjekter</NavBar.Link>
+            <NavBar.Link to="/kontakt" >Kontakt</NavBar.Link>
           </NavBar>
         </Column>
       </Row><hr></hr>

@@ -20,7 +20,7 @@ class CV extends Component {
       <div className="container div-width">
           <Row>
           <Column>
-                <Logo title=""></Logo>
+                <Logo src="/Assets/sivert.jpg"></Logo>
                 <div>
                     <h3><i>Student, Bachelor i <br/> Digital Forretningsutvikling</i></h3>
                 </div>

@@ -12,7 +12,7 @@ class DokumentArkiv extends Component {
         </div>
         <div className="container">
         <Row>
-            <Column>
+            <Column width={300}>
                 <OppgaveView 
                     src=".\Assets\oppgaver\anvendt_data_science.pdf" 
                     desc="Analyse av arbeidsledighetsprosenten under forskjellige kriser" 

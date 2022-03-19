@@ -1,16 +1,14 @@
 import * as React from 'react';
-import { ReactNode, ChangeEvent } from 'react';
+import { ReactNode } from 'react';
 import { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-// Card - for å ramme inn innhold på nettsiden, kan sette tittel
-// Properties: title
 export class Card extends Component<{ title: ReactNode, center?: boolean }> {
   render() {
     return (
       <div className="card rounded align">
         <div className="card-body">
-          <p className={"card-title text-" + (this.props.center ? 'center' : 'none')}>{this.props.title}</p>
+          <h2 className={" text-" + (this.props.center ? 'center' : 'none')}>{this.props.title}</h2>
           <div className={"card-text text-" + (this.props.center ? 'center' : 'none')}>{this.props.children}</div>
         </div>
       </div>
@@ -18,162 +16,36 @@ export class Card extends Component<{ title: ReactNode, center?: boolean }> {
   }
 }
 
-// Row
-export class Row extends Component {
+export class Row extends Component<{ className?: string }>{
   render() {
-    return <div className="row">{this.props.children}</div>;
+    return <div className={"row "+ (this.props.className)} >{this.props.children}</div>;
   }
 }
 
-
-/*<h2>{this.props.title}</h2>*/
-export class Logo extends Component<{ title?: string }> {
+export class Logo extends Component<{ src?: string }> {
   render(){
     return (
       <>
         <div className="container">
-            <img src="/Assets/sivert.jpg" className="img-round" alt="Sivert Bjørnstad"></img>
+            <img src={this.props.src} className="img-round" alt="Sivert Bjørnstad"></img>
         </div>
       </>
     )
   }
 }
 
-export class CardRow extends Component {
-  render() {
-    return (
-      <div className="card">
-        <div className="row">{this.props.children}</div>
-      </div>
-    );
-  }
-}
-
-export class ColumnPadd extends Component<{ width?: number; right?: boolean }> {
-  render() {
-    return (
-      <div padding-left={5}>
-        <div className={'col' + (this.props.width ? '-' + this.props.width : '')}>
-          <div className={'float-' + (this.props.right ? 'end' : 'start')}>
-            {this.props.children}
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-export class AutoColumn extends Component<{ right?: boolean }> {
-  render() {
-    return (
-      <div className={'col-md-auto'}>
-        <div className={'float-' + (this.props.right ? 'end' : 'start')}>{this.props.children}</div>
-      </div>
-    );
-  }
-}
-// Column (properties: width, right)
-export class Column extends Component<{ width?: number; right?: boolean; to?: string }> {
+export class Column extends Component<{ width?: number; right?: boolean; center?: boolean}> {
   render() {
     return (
       <div className={'col' + (this.props.width ? '-' + this.props.width : '')}>
-        <div className={'float-' + (this.props.right ? 'end' : 'start')}>{this.props.children}</div>
+        <div className={'float-' + (this.props.right ? 'end' : 'start') + " text-" + (this.props.center ? 'center' : 'none')}>{this.props.children}</div>
       </div>
     );
   }
 }
 
-class ButtonDark extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-dark button-darker" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-// Button Success - opprette spill, anmeldelse, rating
-// properties: onClick
-class ButtonSuccess extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-success" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-// Button Danger - slette spill, slette anmeldelse, slette rating
-// properties: onClick
-class ButtonDanger extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-danger" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-// Button Light - lys knapp som brukes til ...
-// properties: onClick
-class ButtonLight extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-light" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-class ButtonInfo extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-info" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-
-// Denne passer godt inn med bakgrunnsfargene - vil bli mest brukt
-class ButtonSecondary extends Component<{ onClick: () => void }> {
-  render() {
-    return (
-      <button type="button" className="btn btn-secondary" onClick={this.props.onClick}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
-class ButtonDarkModeToggle extends Component <{ onClick: () => void }>{
-  render(){
-    return(
-      <div className="container">
-	        <button 
-            className="toggle--checkbox" 
-            aria-label="Toggle Light Mode" 
-            onClick={this.props.onClick}>
-	        </button> 
-    </div>
-    )
-  }
-}
-
-export class Button {
-  static Dark = ButtonDark;
-  static Success = ButtonSuccess;
-  static Danger = ButtonDanger;
-  static Light = ButtonLight;
-  static Info = ButtonInfo;
-  static Secondary = ButtonSecondary;
-  static Toogle = ButtonDarkModeToggle;
-}
-
 // Navigation bar link (properties: to)
-export class NavBarLink extends Component<{ to: string }> {
+export class NavBarLink extends Component<{ to: string; }> {
   render() {
     return (
       <NavLink className="nav-link" activeClassName="active" to={this.props.to}>
@@ -185,196 +57,65 @@ export class NavBarLink extends Component<{ to: string }> {
 
 // Navigation bar (properties: brand)
 export class NavBar extends Component<{ brand: ReactNode }> {
-  static Link = NavBarLink;
-
+static Link = NavBarLink;
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark " >
-      <a href="#" className="navbar-brand">{this.props.brand}</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse n" id="navbarNav" >
-        <ul className="navbar-nav ">
-          <li className="nav-item d-none d-md-block ">
-            <div className="nav-link">{this.props.children}</div>
-          </li>
-          <li className="nav-item d-md-none nav-size">
-            <div className="nav-link">{this.props.children}</div>
-          </li>
-          
-        </ul>
+    <>
+      <div className='nav-bar-width'>
+        <nav className="navbar navbar-expand-md navbar-dark " >
+        <a href="#" className="navbar-brand">{this.props.brand}</a>
+        <button className="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" ></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav" >
+          <ul className="navbar-nav">
+            <li className="nav-item d-none d-lg-inline  ">
+              {this.props.children}
+            </li>
+            <li className="nav-item d-xs-block d-lg-none">
+              {this.props.children}
+            </li>
+          </ul>
+        </div>
+        </nav>
       </div>
-    </nav>
+    </>
     );
   }
 }
 
-// Form label - etikett
-class FormLabel extends Component {
+export class HeaderLink extends Component<{ to: string; title: string}> {
+  
   render() {
     return (
-      <span>
-        <label className="form col-form-label form-display">{this.props.children}</label>
-      </span>
+      <Link className=" h1 header-link " to={this.props.to}><h1>{this.props.title}</h1></Link>
     );
   }
 }
 
-// Form input - legge til spill
-class FormInput extends Component<{
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    // ...rest will contain extra passed attributes such as disabled, required, width, height, pattern
-    // For further information, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-    const { type, value, onChange, ...rest } = this.props;
-    return (
-      <input
-        {...rest}
-        className="form-input form form-control"
-        type={this.props.type}
-        value={this.props.value}
-        onChange={this.props.onChange}
-      />
-    );
-  }
-}
 
-class FormNumberInput extends Component<{
-  value: number;
-  max: number;
-  min: number;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  [prop: number]: any;
-}> {
+export class OppgaveView extends Component<{ src?: string , desc?: string, title?: string, fagkode?: string, img?: string }> {
   render() {
-    // ...rest will contain extra passed attributes such as disabled, required, width, height, pattern
-    // For further information, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-    const { value, onChange, max, min, ...rest } = this.props;
-    return (
-      <input
-        {...rest}
-        min={this.props.min}
-        max={this.props.max}
-        type="number"
-        className="form-control"
-        value={this.props.value}
-        onChange={this.props.onChange}
-      />
-    );
-  }
-}
-
-// Form textarea - legge til spill
-class FormTextarea extends React.Component<{
-  value: string | number;
-  onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    // ...rest will contain extra passed attributes such as disabled, required, rows, cols
-    // For further information, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-    const { value, onChange, ...rest } = this.props;
-    return <textarea {...rest} className="form-control" value={value} onChange={onChange} />;
-  }
-}
-
-// Form checkbox
-class FormCheckbox extends Component<{
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    const { onChange, value, ...rest } = this.props;
-    return (
-      <input
-        {...rest}
-        checked={value}
-        className="form-check-input form-item form-check"
-        type="checkbox"
-        onChange={onChange}
-      />
-    );
-  }
-}
-
-// Form select
-class FormSelect extends Component<{
-  key: string | number;
-  value: string | number;
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    const { key, value, onChange, children, ...rest } = this.props;
-    return (
-      <select {...rest} className="custom-select" value={value} key={key} onChange={onChange}>
-        {children}
-      </select>
-    );
-  }
-}
-
-class FormDate extends Component<{
-  placeholder: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    const { placeholder, value, onChange, ...rest } = this.props;
-    return (
-      <div>
-        <input
-          className="form-input form-control"
-          type="date"
-          placeholder={placeholder}
-          onChange={onChange}
-          value={value}
-          {...rest}
-        ></input>
+    return(
+      <>
+        <div className="pdf-style" >
+          <h3 className="text-justify">{this.props.title} - {this.props.fagkode}</h3>
+          <div className="text-justify">{this.props.desc}</div>
+          <div className="img-container">
+            <img src={this.props.img} className="pdf-img"/>
+              <div className="overlay">
+                <a className="link-img" href={this.props.src}>Åpne pdf</a>
+              </div>
+          </div>
       </div>
-    );
+
+      
+      <br/>
+        <br/>
+        <br/>
+      </>
+    )
   }
-}
-
-class FormSelectDropdown extends Component<{
-  valueList:string[];
-  value: string;
-
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-  [prop: string]: any;
-}> {
-  render() {
-    const { value, valueList, onChange, ...rest } = this.props;
-    return (
-      <div>
-        <select className="form-select" value={value} onChange={onChange} {...rest}>
-          {valueList.map((option, index) => {
-            return (
-              <option key={index} className="dropdown-item" value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-      </div>
-    );
-  }
-}
-
-export class Form {
-  static Label = FormLabel; // = From.Label osv.
-  static Input = FormInput;
-  static Textarea = FormTextarea;
-  static Checkbox = FormCheckbox;
-  static Select = FormSelect;
-  static NumberInput = FormNumberInput;
-  static Date = FormDate;
-  static SelectDropDown = FormSelectDropdown;
 }
 
 /*
@@ -442,161 +183,4 @@ export class Alert extends Component {
 */
 
 
-// Søkefelt. Hentet fra (Forms) https://getbootstrap.com/docs/4.0/components/navbar/#forms
-export class SearchBar extends Component<{
-  value: string;
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, value: string) => void;
-  [prop: string]: any;
-}> 
-{
-  fieldValue: string = "";
 
-  render() {
-    const { value, onClick, ...rest } = this.props;
-    return (
-        <form className="form-inline search-div">
-          <input
-            className="form-control mr-sm-2 search-div"
-            type="search"
-            placeholder="Search for games"
-            aria-label="Search"
-            value={this.fieldValue}
-            onChange={(event) => {this.fieldValue = event.currentTarget.value;}}
-            {...rest}
-          />
-          <button 
-            className="btn btn-dark my-2 my-sm-0" 
-            type="submit"
-            onClick={(event) => onClick(event, this.fieldValue)}
-          >
-            Search 
-          </button>
-        </form>
-    );
-  }
-}
-
-export class HeaderLink extends Component<{ to: string; title: string}> {
-  
-  render() {
-    return (
-      <Link className=" h1 header-link " to={this.props.to}><h1>{this.props.title}</h1></Link>
-    );
-  }
-}
-// Innlogging. Hentet fra (Menu forms) https://getbootstrap.com/docs/4.0/components/dropdowns/#menu-forms
-// Mulig vi ikke kommer til å bruke denne hvis vi har innlogging via fb e.l.
-// Bytte ut
-export class SignIn extends Component {
-  render() {
-    return (
-      <div className="dropdown-menu">
-        <form className="px-4 py-3">
-          <div className="form-group">
-            <label htmlFor="exampleDropdownFormEmail1">E-post</label>
-            <input
-              type="email"
-              className="form-control"
-              id="exampleDropdownFormEmail1"
-              placeholder="email@example.com"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="exampleDropdownFormPassword1">Passord</label>
-            <input
-              type="password"
-              className="form-control"
-              id="exampleDropdownFormPassword1"
-              placeholder="Password"
-            />
-          </div>
-          <div className="form-check">
-            <input type="checkbox" className="form-check-input" id="dropdownCheck" />
-            <label className="form-check-label" htmlFor="dropdownCheck">
-              Husk meg
-            </label>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Logg inn
-          </button>
-        </form>
-        <div className="dropdown-divider"></div>
-        <a className="dropdown-item" href="#">
-          Opprett ny bruker
-        </a>
-        <a className="dropdown-item" href="#">
-          Glemt passordet?
-        </a>
-      </div>
-    );
-  }
-}
-
-export class OppgaveView extends Component<{ src?: string , desc?: string, title?: string, fagkode?: string, img?: string }> {
-  render() {
-    return(
-      <>
-        <div className="pdf-style">
-          <h3 className="text-justify">{this.props.title} - {this.props.fagkode}</h3>
-          <div className="text-justify">{this.props.desc}</div>
-          <div className="img-container">
-            <img src={this.props.img} className="pdf-img"/>
-              <div className="overlay">
-                <a className="link-img" href={this.props.src}>Åpne pdf</a>
-              </div>
-          </div>
-      </div>
-
-      
-      <br/>
-        <br/>
-        <br/>
-      </>
-    )
-  }
-}
-
-/*
-export class OppgaveView extends Component<{ src?: string , desc?: string, title?: string, fagkode?: string }> {
-  render() {
-    return(
-      <>
-        <div>
-          <h3>{this.props.title} - {this.props.fagkode}</h3>
-          <div>{this.props.desc}</div>
-          <div className="pdf-style">
-            <iframe 
-              src={this.props.src}
-              scrolling="no"
-              width="100%"
-              height="480"
-              className="embed-responsive-item"
-            />
-          </div>
-        </div>
-        <a href={this.props.src}>Åpne som pdf</a>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-      </>
-    )
-  }
-}
-*/
-
-/*
-// Image - bilder av spill o.l. Vi ble aldri ferdige med denne, men lar den likevel stå 
-// for å vise at vi har tenkt på denne funksjonaliteten.
-
-export class Image extends Component {
-  render() {
-    return (
-      <div>
-        <b-img src="https://picsum.photos/1024/400/?image=41" fluid alt="Responsive image"></b-img>
-      </div>
-    );
-  }
-}
-
-*/

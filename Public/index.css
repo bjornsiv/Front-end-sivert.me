@@ -1,204 +1,28 @@
-
-
-ul li span {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-}
-.container { 
-  position: right; 
-  display: flex; 
-  flex-wrap: wrap;
-  flex-shrink: 3;
-}
-.button { padding: 0; width: 50px; border: 0; background-color: #fff; color: #333; cursor: pointer; outline: 0; font-size: 40px; }
-.dropdownKnapp{
-  float: right;
-  padding-right: 20px;
-  padding-top: 0px;
-}
-.titel{
-  padding-left: 10px;
-}
-
-html, #root {
-  background-color: var(--dark-background);
-  color: var(--dark-text);
-}
-
-nav {
-  background-color: var(--dark-background);
-  color: var(--light-text);
-}
-
-.main-container {
-  background-color: var(--light-background);
-}
-
-
-.theme-dark {
-  --dark-text: #292929;
-  --light-text: #F9F8F8;  
-  --dark-background: #2F4550;
-  --light-background: #586F7C;
-  --accent: #B8DBD9;
-  --button-border: #B8DBD9;
-}
-
-.theme-light {
-  --dark-text: #5E4B56;
-  --light-text: #5E4B56;
-  --dark-background: #DBE7E4;
-  --light-background: #EDDCD2;
-  --accent: #DBE7E4;
-  --button-border: #5E4B56;
-}
-
-.card-text {
-  color:white;
-  font-size: 16px;
-  letter-spacing: 0.8px;
+/* Her er css for rene tagger*/
+body {
+  background: rgb(20,20,20);
+  background: radial-gradient(90deg, rgba(25,25,25,1) 50%, rgba(34,34,34,1) 100%);
   font-family: Tahoma, sans-serif;
-  border: 0ch;
-}
-
-
-.card {
-  background: #202020;
-  display: flex;
-  padding: 30px;
-}
-
-
-/*
-.form-input {
-  background-color: #151515;
-}
-*/
-
-.navbar-style {
-  background-color: #151515;
-  display: flex;
-  font-family: Tahoma, sans-serif;
-  letter-spacing: 0.8px;
-  font-size: 15px;
-  padding: 15px;
-}
-
-.navbar-brand {
-  display: inline-block;
-}
-
-.nav-link {
-  color:white;
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  font-family: Tahoma, sans-serif;
-  border: 0ch;
-  display: inline-block;
-}
-
-.button-darker {
-  background-color: #383636;
-}
-
-.form-check {
-  display:inline-block;
-  margin-right:10px;
-}
-
-.form-display {
-  display: inline-block;
-}
-
-img {
-  width: 100px;
-  height: 100px;
-}
-
-.search-div {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.img-round {
-  border-radius: 50%;
-  width: 27%;
-  height: 27%;
-}
-
-.img-icon {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-div {
-  display: flex;
-  justify-content: flex-end safe;
-  flex-wrap: nowrap;
-}
-
-.p-style {
-  font-weight: normal;
-  font-size: medium;
-}
-
-.a-style {
-  margin-left: 20px;
-}
-
-.pdf-style {
-  border: none;
-  width: 640px;
-  padding-right: 4%;
-}
-
-.img-container {
-  position: relative;
-  width: 50%;
-}
-
-.pdf-img {
-  display: block;
-  width: 307px;
-  height: 240px;
-  float: center;
-  object-fit: contain;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 40%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.img-container:hover .overlay {
-  opacity: 1;
-}
-
-.link-img {
+  padding: 50px;
+  margin: auto 10px;
+  width: auto;
+  height: 2000px;
   color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }
 
-.header-align {
-  text-align: center;
+p {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.8px;
 }
 
-.div-width {
-  width: 1320px;
-  align-items: center ;
+a{
+  margin-left: 12px;
+}
+
+nav{
+  white-space: nowrap;
+}
+.row-margin{
+  margin-bottom: -20px;
 }

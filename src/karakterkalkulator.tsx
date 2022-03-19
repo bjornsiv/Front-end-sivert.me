@@ -1,5 +1,5 @@
 import React, { Component, useState} from "react";
-import { Form, Card, Row, Column, Button } from "./widgets";
+import { Card, Row, Column } from "./widgets";
 
 
 class Kalkulator extends Component{
@@ -26,8 +26,9 @@ class Kalkulator extends Component{
     }
 
     render(){
-        return(
+        return(/*
             <>
+            
                 <Card title="Karakterkalkulator">
                     <Row>
                         <Column>
@@ -60,7 +61,8 @@ class Kalkulator extends Component{
                     </Row>
                 </Card>
             </>
-        )
+            
+        */<p>Hello</p>);
     }
 }
 

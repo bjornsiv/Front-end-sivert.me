@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CardRow, Card } from "./widgets";
+import { Card } from "./widgets";
 
 class Links extends Component {
   render() {
