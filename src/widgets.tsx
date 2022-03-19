@@ -467,6 +467,14 @@ export class SearchBar extends Component<{
   }
 }
 
+export class HeaderLink extends Component<{ to: string; title: string}> {
+  
+  render() {
+    return (
+      <NavLink className=" h1 nav-link " activeClassName="h1 nav-link " tabIndex={1} to= {this.props.to}><h1>{this.props.title}</h1></NavLink>
+    );
+  }
+}
 // Innlogging. Hentet fra (Menu forms) https://getbootstrap.com/docs/4.0/components/dropdowns/#menu-forms
 // Mulig vi ikke kommer til å bruke denne hvis vi har innlogging via fb e.l.
 // Bytte ut

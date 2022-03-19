@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import { NavBar, Column, Row, NavBarLink } from './widgets';
+import { NavBar, Column, Row, HeaderLink } from './widgets';
 import { createHashHistory } from 'history';
 import Arbeid from './arbeid'
 import DokumentArkiv from './dokumenter';
@@ -23,9 +23,7 @@ class Menu extends Component {
         <>
         <Row>
         <Column>
-          <NavBarLink to="/">
-            <h1>Sivert Bjørnstad</h1>
-          </NavBarLink>
+         <HeaderLink title="Sivert Bjørnstad" to="/CV"></HeaderLink>
         </Column>
         <Column></Column>
         <Column>
