@@ -50,7 +50,7 @@ body {
     display: inline-block;
   }
 
-  .nav-link .nav-link:active .nav-link:visited .nav-link:focus .nav-link[tabindex]:focus{
+  .nav-link{
     color:white;
     font-size: 16px;
     letter-spacing: 0.8px;
@@ -58,10 +58,24 @@ body {
     border: 0ch;
     display: inline-block;
   }
-
-  .nav-link:hover {
+  .nav-size {
+    width: 60px;
+  }
+  .header-link{
+    color:white;
+    text-decoration: none; 
+  }
+  .header-link:hover {
     color:grey;
   }
+  /*
+  .header-link:visited{
+    color:white;
+  }
+  .header-link:active{
+    color:white;
+  }
+  */
   .button-darker {
     background-color: #383636;
   }

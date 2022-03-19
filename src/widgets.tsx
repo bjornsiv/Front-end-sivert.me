@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ReactNode, ChangeEvent } from 'react';
 import { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 // Card - for å ramme inn innhold på nettsiden, kan sette tittel
 // Properties: title
@@ -189,14 +189,23 @@ export class NavBar extends Component<{ brand: ReactNode }> {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark navbar-style NavBar-header" >
-        <div className="container-fluid justify-content-start" >
-          <NavLink className="navbar-brand" activeClassName="active" exact to="/">
-            {this.props.brand}
-          </NavLink>
-          <div className="navbar-nav">{this.props.children}</div>
-        </div>
-      </nav>
+      <nav className="navbar navbar-expand-md navbar-dark " >
+      <a href="#" className="navbar-brand">{this.props.brand}</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse n" id="navbarNav" >
+        <ul className="navbar-nav ">
+          <li className="nav-item d-none d-md-block ">
+            <div className="nav-link">{this.props.children}</div>
+          </li>
+          <li className="nav-item d-md-none nav-size">
+            <div className="nav-link">{this.props.children}</div>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
     );
   }
 }
@@ -471,7 +480,7 @@ export class HeaderLink extends Component<{ to: string; title: string}> {
   
   render() {
     return (
-      <NavLink className=" h1 nav-link " activeClassName="h1 nav-link " tabIndex={1} to= {this.props.to}><h1>{this.props.title}</h1></NavLink>
+      <Link className=" h1 header-link " to={this.props.to}><h1>{this.props.title}</h1></Link>
     );
   }
 }

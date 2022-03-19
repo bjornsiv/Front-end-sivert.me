@@ -31,7 +31,7 @@ class CV extends Component {
                     <hr/>
                 </div>
             <Card title="Om Meg">
-                Jeg er {this.alder()} år gammel og er for øyeblikket påbegynt 3. året Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommer fra miljøet og de man arbeider med.
+                Jeg er {this.alder()} år gammel og er snart ferdig med Bachelor i Digital Forretningsutvikling hos NTNU. Jeg er veldig læringsivrig og arbeidsom, og trives best i å arbeide med andre. Jeg verdsetter et arbeidsmiljø der man fokuserer på læring og samarbeid, der en del av motivasjonen kommer fra miljøet og de man arbeider med.
             </Card>
             <hr></hr>
             <Card title="Interesser">
@@ -48,7 +48,8 @@ class CV extends Component {
           <Column>
             <br/>
             <Card title="Erfaring">
-                <b>Lagermedarbeider</b><br/><i>ASKO sentrallager | 2019-Present</i><br/><br/>
+            <b>Førstegangstjeneste</b><br/><i>HMKG | 2017-2018</i><br/><br/>
+                <b>Lagermedarbeider</b><br/><i>ASKO sentrallager | 2019-2021</i><br/><br/>
                 <b>Butikkmedarbeider</b><br/><i>Coop mega Torvbyen | 2016-2017</i>
                 
             </Card>
