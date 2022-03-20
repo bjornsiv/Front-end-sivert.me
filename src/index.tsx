@@ -5,6 +5,7 @@ import { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import { NavBar, Column, HeaderLink } from './widgets';
 import { createHashHistory } from 'history';
+import 'bootstrap'
 import '../public/app.scss'
 import Arbeid from './arbeid'
 import DokumentArkiv from './dokumenter';
@@ -27,7 +28,7 @@ class Menu extends Component {
          <HeaderLink title="Sivert Bjørnstad" to="/CV"></HeaderLink>
         </Column>
         <Column></Column>
-        <Column>
+        <Column width={312}>
           <NavBar brand="">
             <NavBar.Link to="/CV" >CV</NavBar.Link>
             <NavBar.Link to="/dokument" >Oppgaver</NavBar.Link>

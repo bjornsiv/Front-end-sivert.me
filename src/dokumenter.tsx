@@ -12,7 +12,8 @@ class DokumentArkiv extends Component {
         </div>
         <div className="container">
         <Row>
-            <Column width={300}>
+ 
+            <Column>
                 <OppgaveView 
                     src=".\Assets\oppgaver\anvendt_data_science.pdf" 
                     desc="Analyse av arbeidsledighetsprosenten under forskjellige kriser" 
@@ -28,8 +29,6 @@ class DokumentArkiv extends Component {
                     img=".\Assets\oppgaver\bransjer.png"
                 />
             </Column>
-        </Row>
-        <Row>
             <Column>
                 <OppgaveView 
                     src=".\Assets\oppgaver\Digital_strategi.pdf" 

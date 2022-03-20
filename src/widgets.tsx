@@ -48,7 +48,7 @@ export class Column extends Component<{ width?: number; right?: boolean; center?
 export class NavBarLink extends Component<{ to: string; }> {
   render() {
     return (
-      <NavLink className="nav-link" activeClassName="active" to={this.props.to}>
+      <NavLink className="nav-link" activeClassName="active" to={this.props.to} data-toggle="collapse" data-target="#navbarNav">
         {this.props.children}
       </NavLink>
     );
@@ -69,10 +69,10 @@ static Link = NavBarLink;
         </button>
         <div className="collapse navbar-collapse" id="navbarNav" >
           <ul className="navbar-nav">
-            <li className="nav-item d-none d-md-inline  ">
+            <li className="nav-item d-none d-md-inline " >
               {this.props.children}
             </li>
-            <li className="nav-item d-xs-block d-md-none">
+            <li className="nav-item d-md-none">
               {this.props.children}
             </li>
           </ul>
@@ -99,8 +99,8 @@ export class OppgaveView extends Component<{ src?: string , desc?: string, title
     return(
       <>
         <div className="pdf-style" >
-          <h3 className="text-justify">{this.props.title} - {this.props.fagkode}</h3>
-          <div className="text-justify">{this.props.desc}</div>
+          <h3 className="text-justify text-wrap">{this.props.title} - {this.props.fagkode}</h3>
+          <div className="text-justify text-wrap">{this.props.desc}</div>
           <div className="img-container">
             <img src={this.props.img} className="pdf-img"/>
               <div className="overlay">

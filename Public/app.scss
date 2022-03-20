@@ -1,22 +1,5 @@
-.nav-link{
-    color:white;
-    font-family: Tahoma, sans-serif;
-    border: 0ch;
-    display: inline;
-    font-size: 20px;
-    letter-spacing: 2.8px;
-  }
-  /*
-  @include media-breakpoint-up(lg) {    
-    font-size: 32px;
-    letter-spacing: 0.8px;
-  }
-  */
-  .nav-size {
-    width: 60px;
-    display: block;
-  }
-  .nav-button{
-    display: inline;
-    flex: flex-end;
-  }
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../public/Stylesheets/app-styling.scss';
+@import '../public/Stylesheets/index.scss';
