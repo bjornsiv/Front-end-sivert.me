@@ -14,6 +14,7 @@ import Links from './Links';
 import Kontakt from './kontakt';
 import Kalkulator from './karakterkalkulator'
 import CV from './CV';
+import Subdomener from './subdomener';
 
 const history = createHashHistory();
 
@@ -57,6 +58,7 @@ if (root)
         <Route exact path="/karakter" component={Kalkulator}/>
         <Route exact path="/arbeid" component={Arbeid}/>
         <Route exact path="/dokument" component={DokumentArkiv}/>
+        <Route exact path="/sub" component={Subdomener}/>
       </div>
     </HashRouter>,
     document.getElementById('root')

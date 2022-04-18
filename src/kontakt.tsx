@@ -21,7 +21,7 @@ class Kontakt extends Component {
             </tr>
             <tr className="lead text-center">
               <th>Epost:   </th>
-              <td>admin@sivert.me</td>
+              <td>kontakt@sivert.priv.no</td>
             </tr>
           </tbody>
         </table>
