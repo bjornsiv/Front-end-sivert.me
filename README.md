@@ -1,4 +1,4 @@
-# Front-end sivert.me
+# Front-end sivert.priv.no
 Dette er front end-en til domenet sivert.me
 
 ## Node.js og NPM 
