@@ -1,5 +1,5 @@
 # Front-end sivert.priv.no
-Dette er front end-en til domenet sivert.me
+Dette er front end-en til domenet sivert.priv.no
 
 ## Node.js og NPM 
 Før du begynner må du ha installert Node.js og NPM. Node.js blir blant annet brukt til å kjøre JavaScript-kode i serveren, mens NPM er en pakkebehandler som forenkler installasjonen av programvarebiblioteker slik at vi kan benytte oss av disse. NPM brukes både på klient- og serversiden.  
