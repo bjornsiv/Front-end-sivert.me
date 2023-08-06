@@ -17,10 +17,6 @@ class Kontakt extends Component {
           <tbody>
             <tr className="lead text-center">
               <th>Epost:   </th>
-              <td>sivertbjorn@gmail.com</td>
-            </tr>
-            <tr className="lead text-center">
-              <th>Epost:   </th>
               <td>kontakt@sivert.priv.no</td>
             </tr>
           </tbody>

@@ -15,6 +15,9 @@ før man kan forhåndsvise siden må man navigere til `/` (altså root mappen) o
 
 **1.3 npm build** Bygger en utvikling bundle av nettsiden og vil legge seg i public-katalogen. Dersom dette fører til en feilmelding, kan en forsøke å bruke kommandoen ‘npm run-script build’ som et alternativ.
 
+**OppdatereNPM** For å oppdatere alle pakker i NPM, kjør følgende kommandoer etter hverandre:
+npx npm-check-updates -u 
+npm install 
 
 ## Git tutorial
 
